@@ -1,3 +1,16 @@
+# Authentication
+enteredPlayerName = input("Enter your name: ")
+checkPlayersArray = []
+with open("players.txt", "r") as checkPlayersFile:
+  for line in checkPlayersFile:
+    checkPlayersArray.append(line.strip(", 0\n"))
+
+if enteredPlayerName in checkPlayersArray:
+  print("Authenticated!\n")
+else:
+  print("Not Authenticated")
+  exit(0)
+
 import random
 # Function to add a user to the players file
 def addingUser(toAppendName):
